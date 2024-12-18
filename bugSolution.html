@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Bug Solution</title>
+</head>
+<body>
+  <div id="myDiv">
+    <p>This is some text.</p>
+  </div>
+
+  <script>
+    // Correct way to access the div element
+    var divElement = document.getElementById("myDiv");
+    
+    //Check if element exist before using it
+    if(divElement){
+        divElement.innerHTML = "<p>Text changed.</p>";
+    }else{
+        console.error("Element not found");
+    }
+  </script>
+</body>
+</html>
